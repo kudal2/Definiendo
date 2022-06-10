@@ -28,7 +28,7 @@
             loop
             crossorigin
             webkit-playsinline
-            autoplay
+            autoplay loop = "true"
             muted
             playsinline
         ></video>
@@ -37,7 +37,7 @@
         <a-video
             src="#vid"
             position='0 0.1 0'
-            rotation="-90 0 0"
+            rotation="0 0 0"
             look-at="[gps-camera]"
             videohandler
             smooth="true"
@@ -45,7 +45,7 @@
             smoothTolerance="0.01"
             smoothThreshold="5"
             autoplay="false"
-            scale="5 5 5"
+            scale="3 3 3"
             gps-entity-place="simulateLatitude: 10.243750697184334; simulateLongitude: -68.01063680652078"
         ></a-video>
 	</a-scene>
