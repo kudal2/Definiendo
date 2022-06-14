@@ -22,14 +22,16 @@
     <a-assets>
         <video
             src="./assets/asset.mp4"
+            type="video/mp4"
             preload="auto"
             id="vid"
             response-type="arraybuffer"
-            loop="true"
+            
             crossorigin
             webkit-playsinline
-            autoplay="true"
+            autoplay
             muted
+            loop
             playsinline
         ></video>
     </a-assets>
@@ -44,7 +46,7 @@
             smoothCount="10"
             smoothTolerance="0.01"
             smoothThreshold="5"
-            autoplay="true"
+            autoplay
             scale="5 5 5"
             gps-entity-place="simulateLatitude: 10.243750697184334; simulateLongitude: -68.01063680652078"
         ></a-video>
