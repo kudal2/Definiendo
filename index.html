@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>GeoAR.js demo</title>
+    <title>Parque</title>
     <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
@@ -12,44 +12,34 @@
     </script>
 </head>
 
-<body style='margin: 0; overflow: hidden;'>
-    
+<body style="margin: 0; overflow: hidden;">
     <a-scene
-            embedded
-            loading-screen="enabled: false;"
-            arjs="sourceType: webcam; debugUIEnabled: false;"
-        >
-    <a-assets>
-        <video
-            src="./assets/asset.mp4"
-            type="video/mp4"
-            preload="auto"
-            id="vid"
-            response-type="arraybuffer"
-            controls
-            crossorigin
-            webkit-playsinline
-            autoplay
-            muted
-            loop
-            playsinline
-        ></video>
-    </a-assets>
+        renderer="logarithmicDepthBuffer: true;"
+        embedded
+        loading-screen="enabled: false;"
+        arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+        <a-assets>
+            <a-asset-item
+                id="animated-asset"
+                src="assets/asset.gltf"
+            ></a-asset-item>
+        </a-assets>
 
-        <a-video
-            src="#vid"
-            position='5 0.1 0'
-            rotation="-90 0 0"
-            look-at="[gps-camera]"
-            videohandler
-            smooth="true"
-            smoothCount="10"
-            smoothTolerance="0.01"
-            smoothThreshold="5"
-            autoplay
-            scale="5 5 5"
-            gps-entity-place="simulateLatitude: 10.243750697184334; simulateLongitude: -68.01063680652078"
-        ></a-video>
-	</a-scene>
+            <a-entity
+                look-at="[gps-camera]"
+                animation-mixer="loop: repeat"
+                gltf-model="#animated-asset"
+                position='40 0.1 0'
+
+                scale="0.5103510778400012 0.5103510778400012 0.5103510778400012"
+                gps-entity-place="simulateLatitude: 10.231993; simulateLongitude: -68.009383; simulateAltitude: 0"
+            ></a-entity>
+
+        <a-camera gps-camera rotation-reader></a-camera>
+    </a-scene>
 </body>
 </html>
+
+
+
