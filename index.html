@@ -14,37 +14,6 @@
 </head>
 
 <body style="margin: 0; overflow: hidden;">
-    <style>
-        .play {
-            background-color: aqua;
-            border: none;
-            color: white;
-            padding: 7px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 12px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 12px;
-            position: fixed;
-            z-index: 1;
-            width: 100%;
-            top: 10px;
-
-        }
-    </style>
-
-   
-
-    <audio src="assets/cajamusica.mp3" type="audio/mpeg" class="play" controls></audio>
-
-<div style="position: fixed; top: 10px; width:100%; text-align:center; z-index:1;">
-        <button class="button" id="btn1">Play Sound</button>
-        <button class="button" id="btn2">Stop Sound</button>
-
-        
-      
     
     <a-scene
         renderer="logarithmicDepthBuffer: true;"
@@ -70,7 +39,31 @@
             ></a-entity>
 
         <a-camera gps-camera rotation-reader></a-camera>
-
+        <style>
+            .play {
+                background-color: aqua;
+                border: none;
+                color: white;
+                padding: 7px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px;
+                position: fixed;
+                z-index: 1;
+                width: 100%;
+                top: 10px;
+    
+            }
+        </style>
+    
+       
+    
+        <audio src="assets/cajamusica.mp3" type="audio/mpeg" class="play" controls></audio>
+    
 
     </a-scene>
    
