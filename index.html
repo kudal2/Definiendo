@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="margin: 1px; overflow: hidden;">
-    
+<body style="margin: 10px; overflow: hidden;">
+    <div class="audio">
+        <audio src="assets/cajamusica.mp3" controls class="audio"></audio>
+
+    </div>
     
     <a-scene
         renderer="logarithmicDepthBuffer: true;"
@@ -41,11 +44,9 @@
 
         <a-camera gps-camera rotation-reader></a-camera>
 
-    </a-scene>
-    <div class="audio">
-        <audio src="assets/cajamusica.mp3" controls class="audio"></audio>
 
-    </div>
+    </a-scene>
+   
 
 </body>
 </html>
