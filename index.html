@@ -12,42 +12,14 @@
     </script>
 </head>
 
+<script src="places.js"></script>
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
-        vr-mode-ui="enabled: false"
+       vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-        
-        <a-camera gps-camera rotation-reader></a-camera>
-        <a-entity gltf-model="assets/asset.gltf" scale="6 6 6" gps-entity-place="simulateLongitude: -68.01064753535684; simulateLatitude: 10.243782370641224;" animation-mixer/>
-
-        <!--<style>
-            .play {
-                background-color: aqua;
-                border: none;
-                color: white;
-                padding: 7px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 12px;
-                margin: 4px 2px;
-                cursor: pointer;
-                border-radius: 12px;
-                position: fixed;
-                z-index: 1;
-                width: 100%;
-                top: 10px;
-    
-            }
-        </style>
-    
-       
-    
-        <audio src="assets/cajamusica.mp3" type="audio/mpeg" class="play" controls></audio>-->
-    
-
-    </a-scene>
-   
+        <a-camera gps-camera rotation-reader>
+		</a-camera>
+	</a-scene>
 </body>
 </html>
