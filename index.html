@@ -19,8 +19,8 @@
         renderer="logarithmicDepthBuffer: true;"
         embedded
         loading-screen="enabled: false;"
-        arjs="sourceType: webcam; debugUIEnabled: false;"
-    >
+        arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+        >
         <a-assets>
             <a-asset-item
                 id="animated-asset"
@@ -35,11 +35,11 @@
                 position='4 0.1 0'
 
                 scale="6 6 6"
-                gps-entity-place="simulateLatitude: 10.231993; simulateLongitude: -68.009383; simulateAltitude: 0"
+                gps-entity-place="Latitude: 10.245252; Longitude: -68.011240; simulateAltitude: 0"
             ></a-entity>
 
         <a-camera gps-camera rotation-reader></a-camera>
-        <style>
+        <!--<style>
             .play {
                 background-color: aqua;
                 border: none;
@@ -62,7 +62,7 @@
     
        
     
-        <audio src="assets/cajamusica.mp3" type="audio/mpeg" class="play" controls></audio>
+        <audio src="assets/cajamusica.mp3" type="audio/mpeg" class="play" controls></audio>-->
     
 
     </a-scene>
