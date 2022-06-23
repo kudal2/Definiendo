@@ -10,14 +10,12 @@
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="margin: 10px; overflow: hidden;">
-    <div>
-        <audio src="assets/cajamusica.mp3" controls ></audio>
-
-    </div>
-
+<body style="margin: 1px; overflow: hidden;">
+    
+    
     <a-scene
         renderer="logarithmicDepthBuffer: true;"
         embedded
@@ -44,6 +42,11 @@
         <a-camera gps-camera rotation-reader></a-camera>
 
     </a-scene>
+    <div class="audio">
+        <audio src="assets/cajamusica.mp3" controls class="audio"></audio>
+
+    </div>
+
 </body>
 </html>
 
