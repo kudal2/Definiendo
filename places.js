@@ -12,13 +12,7 @@ function staticLoadPlaces() {
                lng: -68.01064753535684,
            }
        },
-       {
-        name: 'assetdos',
-        location: {
-            lat: 10.245870,
-            lng: -68.009889,
-        }
-    },
+       
    ];
 }
 
@@ -30,11 +24,11 @@ function renderPlaces(places) {
        let longitude = place.location.lng;
 
        let model = document.createElement('a-entity');
-       model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+       model.setAttribute('gps-entity-place', `simulateLatitude: ${latitude}; simulateLongitude: ${longitude};`);
        model.setAttribute('gltf-model', 'assets/asset.gltf');
        //model.setAttribute('rotation', '0 180 0');
        model.setAttribute('animation-mixer', '');
-       model.setAttribute('scale', '6 6 6');
+       model.setAttribute('scale', '3 3 3');
 
        model.addEventListener('loaded', () => {
            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
