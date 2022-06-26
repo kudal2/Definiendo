@@ -12,6 +12,13 @@ function staticLoadPlaces() {
                lng: -68.01064753535684,
            }
        },
+       {
+        name: 'assetdos',
+        location: {
+            lat: 10.246169,
+            lng: -68.009979,
+        }
+    },
        
    ];
 }
@@ -33,7 +40,7 @@ function renderPlaces(places) {
 
 
        let modeldos = document.createElement('a-entity');
-       model.setAttribute('gps-entity-place', `latitude: 10.246169; simulateLongitude: -68.009979;`);
+       model.setAttribute('gps-entity-place', `latitude:10.246169 ; longitude: -68.009979;`);
        model.setAttribute('gltf-model', 'assets/cedro.gltf');
        model.setAttribute('rotation', '0 270 0');
        model.setAttribute("position", "4 0.1 0");
